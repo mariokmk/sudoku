@@ -28,7 +28,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class DisplayErrorActivity extends Activity {
+public class DisplayErrorActivity extends BackButtonActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

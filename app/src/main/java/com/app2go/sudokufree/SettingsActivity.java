@@ -20,8 +20,10 @@
 
 package com.app2go.sudokufree;
 
+import android.app.ActionBar;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
+import android.view.MenuItem;
 
 public class SettingsActivity extends PreferenceActivity {
 	@Override
@@ -32,5 +34,22 @@ public class SettingsActivity extends PreferenceActivity {
 
 		getListView().setBackgroundResource(R.drawable.bg);
 		getListView().setCacheColorHint(00000000);
+
+		ActionBar actionBar = getActionBar();
+		if (actionBar != null) {
+			actionBar.setHomeButtonEnabled(true);
+			actionBar.setDisplayHomeAsUpEnabled(true);
+		}
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item){
+		switch(item.getItemId()) {
+			case android.R.id.home:
+				finish();
+				return true;
+		}
+
+		return super.onOptionsItemSelected(item);
 	}
 }

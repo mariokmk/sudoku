@@ -118,7 +118,7 @@
     <string name="name_sudoku_standard_color">彩色-数独</string>
 
     <!-- Captions for various activities -->
-    <string name="page_title_welcome">Sudoku Free</string>
+    <string name="page_title_welcome">Sudoku Pro</string>
     <string name="page_title_resume_game">Resume Game</string>
     <string name="page_title_new_game">开始新游戏</string>
     <string name="page_title_folder_list">导入文件夹</string>

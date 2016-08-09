@@ -75,7 +75,7 @@ import com.app2go.sudokufree.source.PuzzleSource;
 import com.app2go.sudokufree.source.PuzzleSourceIds;
 import com.app2go.sudokufree.source.PuzzleSourceResolver;
 
-public class SudokuActivity extends Activity
+public class SudokuActivity extends BackButtonActivity
 		implements OnTouchListener, OnKeyListener, TickListener {
 	private static final String TAG = SudokuActivity.class.getName();
 

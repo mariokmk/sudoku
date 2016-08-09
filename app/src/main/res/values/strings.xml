@@ -3,7 +3,7 @@
 
 <resources>
     <!-- Application name -->
-    <string name="app_name">Sudoku Free</string>
+    <string name="app_name">Sudoku Pro</string>
 
     <!-- When was a game last played (used by "Resume Game") -->
     <string name="age_0_minutes">0 minutes ago</string>
@@ -120,12 +120,12 @@
     <string name="name_sudoku_standard_color">Color-Sudoku</string>
 
     <!-- Captions for various activities -->
-    <string name="page_title_welcome">Sudoku Free</string>
+    <string name="page_title_welcome">Sudoku Pro</string>
     <string name="page_title_resume_game">Resume Game</string>
     <string name="page_title_new_game">Start New Game</string>
     <string name="page_title_folder_list">Imported Folders</string>
     <string name="page_title_help">Help on Sudoku</string>
-    <string name="page_title_about">About Sudoku Free</string>
+    <string name="page_title_about">About Sudoku Pro</string>
 	<string name="about">\n\nudoku v1.0\n\n\n</string>
     <!-- Game type and difficulty selection (used by "Start New Game") -->
     <string name="spinner_grid">Grid style:</string>

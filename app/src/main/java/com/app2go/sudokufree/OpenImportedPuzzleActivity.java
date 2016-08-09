@@ -30,7 +30,7 @@ import android.util.Log;
 import com.app2go.sudokufree.db.SudokuDatabase;
 import com.app2go.sudokufree.source.PuzzleSourceIds;
 
-public class OpenImportedPuzzleActivity extends Activity {
+public class OpenImportedPuzzleActivity extends BackButtonActivity {
 	private static final String TAG = OpenImportedPuzzleActivity.class.getName();
 
 	@Override

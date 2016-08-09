@@ -3,7 +3,7 @@
 
 <resources>
     <!-- Application name -->
-    <string name="app_name">Sudoku Free</string>
+    <string name="app_name">Sudoku Pro</string>
 
     <!-- When was a game last played (used by "Resume Game") -->
     <string name="age_0_minutes">Il y a moins d\'une minute</string>
@@ -117,7 +117,7 @@
     <string name="name_sudoku_standard_color">Sodoku-lor</string>
 
     <!-- Captions for various activities -->
-    <string name="page_title_welcome">Bienvenue sur Sudoku Free</string>
+    <string name="page_title_welcome">Bienvenue sur Sudoku Pro</string>
     <string name="page_title_resume_game">Reprendre le jeu</string>
     <string name="page_title_new_game">Nouvelle grille</string>
     <string name="page_title_folder_list">Dossiers importés</string>
@@ -135,9 +135,9 @@
     <!-- next line uses 'NO-BREAK SPACE' (U+00A0) to avoid undesired line breaks -->
     <string name="mini_stats_n"  formatted="false">(Grilles\u00A0résolues\u00A0:\u00A0%d, temps\u00A0moyen\u00A0:\u00A0%s, meilleur\u00A0temps\u00A0:\u00A0%s)</string>
 
-    <!-- Declares a permission group and a permission that allows external applications to import puzzles into Sudoku Free -->
-    <string name="permgroup_label_andoku">Sudoku Free</string>
-    <string name="permgroup_description_andoku">Permissions pour interagir avec Sudoku Free.</string>
+    <!-- Declares a permission group and a permission that allows external applications to import puzzles into Sudoku Pro -->
+    <string name="permgroup_label_andoku">Sudoku Pro</string>
+    <string name="permgroup_description_andoku">Permissions pour interagir avec Sudoku Pro.</string>
     <string name="perm_label_import">Importer des grilles de Sudoku</string>
-    <string name="perm_description_import">Autoriser l\'application à créer des dossiers et importer des grilles dans Sudoku Free.</string>
+    <string name="perm_description_import">Autoriser l\'application à créer des dossiers et importer des grilles dans Sudoku Pro.</string>
  </resources>

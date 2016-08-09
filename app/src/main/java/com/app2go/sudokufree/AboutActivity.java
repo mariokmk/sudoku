@@ -27,7 +27,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.webkit.WebView;
 
-public class AboutActivity extends Activity {
+public class AboutActivity extends BackButtonActivity {
 	private static final String TAG = AboutActivity.class.getName();
 
 	@Override
@@ -49,12 +49,10 @@ public class AboutActivity extends Activity {
 
 		WebView aboutNewWebView = (WebView) findViewById(R.id.aboutNewWebView);
 		aboutNewWebView.setBackgroundColor(0);
-		aboutNewWebView.loadUrl("file:///android_asset/"
-				+ getResources().getString(R.string.html_page_about_new));
+		aboutNewWebView.loadUrl("file:///android_asset/" + getResources().getString(R.string.html_page_about_new));
 
 		WebView aboutWebView = (WebView) findViewById(R.id.aboutWebView);
 		aboutWebView.setBackgroundColor(0);
-		aboutWebView.loadUrl("file:///android_asset/"
-				+ getResources().getString(R.string.html_page_about));
+		aboutWebView.loadUrl("file:///android_asset/" + getResources().getString(R.string.html_page_about));
 	}
 }

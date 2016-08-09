@@ -39,7 +39,7 @@ import com.app2go.sudokufree.db.GameStatistics;
 import com.app2go.sudokufree.db.SudokuDatabase;
 import com.app2go.sudokufree.source.PuzzleSourceIds;
 
-public class NewGameActivity extends Activity {
+public class NewGameActivity extends BackButtonActivity {
 	private static final String TAG = NewGameActivity.class.getName();
 
 	private static final String PREF_KEY_PUZZLE_GRID = "puzzleGrid";
