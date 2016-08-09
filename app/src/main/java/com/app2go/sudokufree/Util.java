@@ -126,38 +126,4 @@ class Util {
 		}
 		throw new IllegalStateException();
 	}
-
-	/**
-	 * Set's the window features for edit/play Sudoku
-	 * 
-	 * @param activity
-	 * @param keepScreenOn
-	 * @return True if the activity runs in fullscreen mode, False otherwise
-	 */
-	public static boolean setWindowFeatures(Activity activity) {
-		SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(activity);
-		boolean runsInFullScreen = settings.getBoolean(Settings.KEY_FULLSCREEN_MODE, true);
-
-		Display display = activity.getWindowManager().getDefaultDisplay();
-		int width = display.getWidth();
-		int height = display.getHeight();
-		boolean isPortrait = (width < height);
-		// free version with ads
-		if ((isPortrait && width <= 480 && height <= 800) || // portrait
-				(!isPortrait && height <= 640)) { // landscape
-			// go fullscreen for devices with small screen
-			runsInFullScreen = true;
-		}
-
-		// now set screen mode
-		Window window = activity.getWindow();
-		if (runsInFullScreen) {
-			// hide title and run in full screen
-			activity.requestWindowFeature(Window.FEATURE_NO_TITLE);
-			window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-			window.clearFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
-		}
-
-		return runsInFullScreen;
-	}
 }

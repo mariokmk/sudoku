@@ -48,6 +48,7 @@ import android.view.View.OnKeyListener;
 import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -196,8 +197,6 @@ public class SudokuActivity extends BackButtonActivity
 			Log.v(TAG, "onCreate(" + savedInstanceState + ")");
 
 		super.onCreate(savedInstanceState);
-
-		Util.setWindowFeatures(this);
 
 		setContentView(R.layout.sudoku);
 
