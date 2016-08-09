@@ -6,3 +6,9 @@
 .DS_Store
 /build
 /captures
+.idea/tasks.xml
+.idea/dictionaries
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
+.idea/gradle.xml
+.idea/libraries
