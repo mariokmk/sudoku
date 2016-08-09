@@ -13,17 +13,20 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:text="@string/page_title_help"/>
-    <WebView
-        android:id="@+id/helpWebView"
+    <TextView
+        android:id="@+id/helpView"
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
         android:layout_weight="1"
-        android:fadingEdge="vertical"/>
+        android:fadingEdge="vertical"
+        android:scrollbars = "vertical" />
     <Button
         style="@style/NavigationButton"
         android:id="@+id/backButton"
         android:layout_width="180dip"
-        android:layout_height="40dip"  android:background="@drawable/btn" android:layout_marginRight="10dip"
+        android:layout_height="40dip"
+        android:background="@drawable/btn"
+        android:layout_marginRight="10dip"
         android:layout_marginTop="8dp"
         android:text="@string/button_nav_back"/>
 </LinearLayout>

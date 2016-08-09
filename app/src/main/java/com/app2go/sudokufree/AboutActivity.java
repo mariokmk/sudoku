@@ -22,10 +22,16 @@ package com.app2go.sudokufree;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.webkit.WebView;
+import android.widget.TextView;
+
+import java.io.IOException;
+import java.io.InputStream;
 
 public class AboutActivity extends BackButtonActivity {
 	private static final String TAG = AboutActivity.class.getName();
@@ -47,12 +53,29 @@ public class AboutActivity extends BackButtonActivity {
 			}
 		});
 
-		WebView aboutNewWebView = (WebView) findViewById(R.id.aboutNewWebView);
-		aboutNewWebView.setBackgroundColor(0);
-		aboutNewWebView.loadUrl("file:///android_asset/" + getResources().getString(R.string.html_page_about_new));
+		TextView aboutNewView = (TextView) findViewById(R.id.aboutNewView);
+		aboutNewView.setBackgroundColor(0);
+		aboutNewView.setMovementMethod(new ScrollingMovementMethod());
+		setTextViewContent(aboutNewView, R.string.html_page_about_new);
 
-		WebView aboutWebView = (WebView) findViewById(R.id.aboutWebView);
-		aboutWebView.setBackgroundColor(0);
-		aboutWebView.loadUrl("file:///android_asset/" + getResources().getString(R.string.html_page_about));
+		TextView aboutView = (TextView) findViewById(R.id.aboutView);
+		aboutView.setBackgroundColor(0);
+		aboutView.setMovementMethod(new ScrollingMovementMethod());
+		setTextViewContent(aboutView, R.string.html_page_about);
+	}
+
+	private void setTextViewContent(TextView textView, int assetFile) {
+		// Read HTML from the asset file
+		try {
+			InputStream is = this.getAssets().open(getResources().getString(assetFile));
+			byte[] buffer = new byte[is.available()];
+			is.read(buffer);
+			is.close();
+
+			textView.setText(Html.fromHtml(new String(buffer)));
+		} catch (IOException e) {
+			Log.e(TAG, "Error setting HTML content to the view", e);
+		}
+
 	}
 }

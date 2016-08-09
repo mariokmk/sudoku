@@ -21,11 +21,18 @@
 package com.app2go.sudokufree;
 
 import android.app.Activity;
+import android.content.res.AssetManager;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.webkit.WebView;
+import android.widget.TextView;
+
+import java.io.IOException;
+import java.io.InputStream;
 
 public class HelpActivity extends BackButtonActivity {
 	private static final String TAG = HelpActivity.class.getName();
@@ -47,9 +54,22 @@ public class HelpActivity extends BackButtonActivity {
 			}
 		});
 
-		WebView helpWebView = (WebView) findViewById(R.id.helpWebView);
-		helpWebView.setBackgroundColor(0);
-		helpWebView.loadUrl("file:///android_asset/"
-				+ getResources().getString(R.string.html_page_help));
+		TextView helpView = (TextView) findViewById(R.id.helpView);
+		helpView.setBackgroundColor(0);
+		helpView.setMovementMethod(new ScrollingMovementMethod());
+
+		// Read HTML from the asset file
+		try {
+			InputStream is = this.getAssets().open(getResources().getString(R.string.html_page_help));
+			byte[] buffer = new byte[is.available()];
+			is.read(buffer);
+			is.close();
+
+			helpView.setText(Html.fromHtml(new String(buffer)));
+		} catch (IOException e) {
+			Log.e(TAG, "Error setting HTML content to the view", e);
+		}
 	}
+
+
 }

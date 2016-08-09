@@ -12,18 +12,20 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:text="@string/page_title_about"/>
-    <WebView
-        android:id="@+id/aboutNewWebView"
+    <TextView
+        android:id="@+id/aboutNewView"
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
         android:layout_weight="1"
-        android:fadingEdge="vertical"/>     
-    <WebView
-        android:id="@+id/aboutWebView"
+        android:fadingEdge="vertical"
+        android:scrollbars = "vertical"/>
+    <TextView
+        android:id="@+id/aboutView"
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
         android:layout_weight="1"
-        android:fadingEdge="vertical"/>
+        android:fadingEdge="vertical"
+        android:scrollbars = "vertical"/>
        <!--   -->
     <Button
         style="@style/NavigationButton"
